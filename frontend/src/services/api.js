@@ -1,5 +1,6 @@
-// API Client connecting to Spring Boot Backend
-const API_BASE = '/api';
+// API Client connecting to Spring Boot Backend or Vercel Serverless API
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || '/api').replace(/\/$/, '');
+
 
 export const api = {
   // Menu

@@ -1,0 +1,37 @@
+{
+  "menuItems": [
+    { "id": "esp-1", "name": "Cafe Latte", "category": "Espresso-Based", "price": 59.0, "description": "Classic smooth espresso with silky steamed fresh milk", "bestSeller": false, "color": "#795548" },
+    { "id": "esp-2", "name": "Spanish Latte", "category": "Espresso-Based", "price": 59.0, "description": "Sweetened condensed milk balanced with rich dark espresso", "bestSeller": true, "color": "#8D6E63" },
+    { "id": "esp-3", "name": "Vanilla Latte", "category": "Espresso-Based", "price": 59.0, "description": "Velvety espresso with rich French vanilla syrup & milk", "bestSeller": false, "color": "#D7CCC8" },
+    { "id": "esp-4", "name": "Caramel Latte", "category": "Espresso-Based", "price": 59.0, "description": "Espresso kissed with luscious golden caramel drizzle", "bestSeller": false, "color": "#BCAAA4" },
+    { "id": "esp-5", "name": "White Mocha", "category": "Espresso-Based", "price": 59.0, "description": "Sweet white chocolate indulgence blended with bold espresso", "bestSeller": false, "color": "#A1887F" },
+    { "id": "esp-6", "name": "Americano", "category": "Espresso-Based", "price": 59.0, "description": "Pure, clean double espresso poured over chilled water", "bestSeller": false, "color": "#4E342E" },
+    { "id": "esp-7", "name": "Java Chips", "category": "Espresso-Based", "price": 59.0, "description": "Espresso blended with chocolate chips & mocha swirl", "bestSeller": true, "color": "#3E2723" },
+    { "id": "esp-8", "name": "Einspanner Latte", "category": "Espresso-Based", "price": 59.0, "description": "Rich iced latte topped with thick, sweet Viennese whipped cream", "bestSeller": false, "color": "#5D4037" },
+    { "id": "mat-1", "name": "Matcha Latte", "category": "Matcha Series", "price": 59.0, "description": "Premium pure Japanese green matcha whisked with fresh milk", "bestSeller": false, "color": "#2E7D32" },
+    { "id": "mat-2", "name": "Strawberry Matcha", "category": "Matcha Series", "price": 59.0, "description": "Real strawberry puree layered with iced milk and vibrant matcha", "bestSeller": false, "color": "#388E3C" },
+    { "id": "mat-3", "name": "Matcha Espresso", "category": "Matcha Series", "price": 59.0, "description": "Distinctive layers of earthy matcha, fresh milk, and rich espresso", "bestSeller": false, "color": "#1B5E20" },
+    { "id": "mat-4", "name": "Merry Matcha", "category": "Matcha Series", "price": 59.0, "description": "Festive matcha delight with sweet cream cloud", "bestSeller": true, "color": "#43A047" },
+    { "mlk-1": "Ube Taro", "id": "mlk-1", "name": "Ube Taro", "category": "Milk-Based", "price": 59.0, "description": "Rich local purple yam and sweet taro with creamy fresh milk", "bestSeller": false, "color": "#7B1FA2" },
+    { "id": "mlk-2", "name": "Strawberry", "category": "Milk-Based", "price": 59.0, "description": "Sweet crushed real strawberries swirled in iced fresh milk", "bestSeller": true, "color": "#D81B60" },
+    { "id": "mlk-3", "name": "Dark Cocoa", "category": "Milk-Based", "price": 59.0, "description": "Decadent Dutch cocoa blend for the true chocolate enthusiast", "bestSeller": false, "color": "#4E342E" },
+    { "id": "mlk-4", "name": "Cocoa Berry", "category": "Milk-Based", "price": 59.0, "description": "Rich dark chocolate perfectly paired with sweet berry puree", "bestSeller": false, "color": "#880E4F" },
+    { "id": "juc-1", "name": "Pink Lychee", "category": "Juice Series", "price": 49.0, "description": "Refreshing exotic pink lychee fruit infusion over ice", "bestSeller": false, "color": "#E91E63" },
+    { "id": "juc-2", "name": "Purple Lemonade", "category": "Juice Series", "price": 49.0, "description": "Zesty citrus lemonade naturally colored with butterfly pea flower", "bestSeller": true, "color": "#673AB7" },
+    { "id": "hot-1", "name": "Creamy Cocoa", "category": "Hot Series", "price": 39.0, "description": "Warm comforting Dutch cocoa topped with chocolate dust", "bestSeller": false, "color": "#5D4037" },
+    { "id": "hot-2", "name": "Cappuccino", "category": "Hot Series", "price": 39.0, "description": "Hot robust espresso with equal parts steamed milk and airy foam", "bestSeller": false, "color": "#6D4C41" },
+    { "id": "bld-1", "name": "Blended Java Chips", "category": "Blended Series", "price": 75.0, "description": "Ice blended espresso, chocolate, and crushed java chips with cream cloud", "bestSeller": true, "color": "#3E2723" },
+    { "id": "bld-2", "name": "Blended Dark Cocoa", "category": "Blended Series", "price": 75.0, "description": "Rich ice blended dark cocoa frappe with chocolate drizzle and cream cloud", "bestSeller": true, "color": "#4E342E" },
+    { "id": "bld-3", "name": "Matcha Dream", "category": "Blended Series", "price": 75.0, "description": "Frappe blended premium matcha topped with sweet cream cloud", "bestSeller": false, "color": "#2E7D32" },
+    { "id": "bld-4", "name": "Ube Dream", "category": "Blended Series", "price": 75.0, "description": "Ice blended creamy ube frappe with sweet purple yam swirl", "bestSeller": false, "color": "#6A1B9A" },
+    { "id": "bld-5", "name": "Strawberry Dream", "category": "Blended Series", "price": 75.0, "description": "Refreshing ice blended real strawberries with sweet cream", "bestSeller": false, "color": "#E91E63" }
+  ],
+  "addOns": [
+    { "id": "add-1", "name": "Coffee Jelly", "price": 11.0 },
+    { "id": "add-2", "name": "Espresso Shot", "price": 11.0 },
+    { "id": "add-3", "name": "Strawberry Jam", "price": 11.0 },
+    { "id": "add-4", "name": "Cream Cloud", "price": 11.0 },
+    { "id": "add-5", "name": "Condensed Milk", "price": 11.0 },
+    { "id": "add-6", "name": "Syrup (Vanilla/Hazelnut/Caramel)", "price": 11.0 }
+  ]
+}
