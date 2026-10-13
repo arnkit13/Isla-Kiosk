@@ -2925,6 +2925,40 @@
   "completedAt" : "2026-10-06T15:56:00",
   "notes" : null
 }, {
+  "id" : "ORD-D111ADE1",
+  "orderNumber" : "#246",
+  "customerName" : "Francine",
+  "items" : [ {
+    "menuItemId" : "bld-1",
+    "name" : "Blended Java Chips",
+    "category" : "Blended Series",
+    "quantity" : 1,
+    "unitPrice" : 75.0,
+    "selectedAddOns" : [ ],
+    "addOnsUnitPrice" : 0.0,
+    "itemTotal" : 75.0,
+    "notes" : ""
+  }, {
+    "menuItemId" : "mat-3",
+    "name" : "Matcha Espresso",
+    "category" : "Matcha Series",
+    "quantity" : 1,
+    "unitPrice" : 59.0,
+    "selectedAddOns" : [ ],
+    "addOnsUnitPrice" : 0.0,
+    "itemTotal" : 59.0,
+    "notes" : ""
+  } ],
+  "totalAmount" : 134.0,
+  "paymentMethod" : "Cash",
+  "amountPaid" : 134.0,
+  "changeAmount" : 0.0,
+  "status" : "PENDING",
+  "createdAt" : "2026-10-13T21:06:26",
+  "updatedAt" : "2026-10-13T21:06:26",
+  "completedAt" : null,
+  "notes" : null
+}, {
   "id" : "ORD-2DE7999C",
   "orderNumber" : "#217",
   "customerName" : "Nadine Lustre",
@@ -4035,9 +4069,9 @@
   "paymentMethod" : "Cash",
   "amountPaid" : 59.0,
   "changeAmount" : 0.0,
-  "status" : "PENDING",
+  "status" : "READY",
   "createdAt" : "2026-10-11T01:24:24",
-  "updatedAt" : "2026-10-11T01:24:24",
+  "updatedAt" : "2026-10-13T21:06:33",
   "completedAt" : null,
   "notes" : null
 }, {
