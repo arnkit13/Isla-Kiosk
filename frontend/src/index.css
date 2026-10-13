@@ -2261,3 +2261,536 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   background: var(--bg-sand-dark);
 }
 
+/* ==========================================================================
+   MOBILE FLOATING CART BAR (POS VIEW)
+   ========================================================================== */
+.mobile-floating-cart-bar {
+  display: none;
+}
+
+@keyframes slideUpFade {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN: TABLETS & MOBILE PHONES
+   ========================================================================== */
+
+/* --- TABLET BREAKPOINT (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .main-view-container {
+    padding: 18px 20px;
+  }
+
+  .pos-layout {
+    grid-template-columns: 1fr 340px;
+    gap: 18px;
+    height: calc(100vh - 90px);
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .split-queue-board {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .tv-display-container {
+    height: auto;
+  }
+
+  .tv-banner h1 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* --- TABLET PORTRAIT / MOBILE SWITCH (max-width: 860px) --- */
+@media (max-width: 860px) {
+  .pos-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 22px;
+  }
+
+  .menu-section {
+    height: auto;
+    overflow: visible;
+  }
+
+  .menu-grid {
+    overflow-y: visible;
+    max-height: none;
+    padding-bottom: 80px; /* Space for mobile floating cart bar */
+  }
+
+  .cart-sidebar {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Show floating cart bar on tablet portrait & mobile */
+  .mobile-floating-cart-bar {
+    display: flex;
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 95;
+    background: var(--color-espresso);
+    color: #FFFFFF;
+    border-radius: var(--radius-pill);
+    padding: 10px 18px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 28px rgba(43, 23, 14, 0.38);
+    cursor: pointer;
+    animation: slideUpFade 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .mobile-floating-cart-bar:active {
+    transform: scale(0.98);
+  }
+
+  .mobile-floating-cart-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-floating-cart-icon-pill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--accent-caramel);
+    color: #FFFFFF;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .mobile-floating-cart-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-floating-cart-total {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+  }
+
+  .mobile-floating-cart-count {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+  }
+
+  .mobile-floating-cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  /* Bartender Top Bar responsiveness */
+  .bartender-top-bar {
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .bartender-title-box {
+    flex: 1;
+  }
+
+  .bartender-heading {
+    font-size: 1.1rem;
+  }
+
+  .bartender-nav-tabs {
+    order: 3;
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .bartender-nav-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 9px 12px;
+    font-size: 0.82rem;
+  }
+
+  .queue-quick-ticker {
+    display: none;
+  }
+
+  .split-queue-board {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .split-queue-col {
+    min-height: auto;
+  }
+}
+
+/* --- MOBILE PHONES BREAKPOINT (max-width: 640px) --- */
+@media (max-width: 640px) {
+  .main-view-container {
+    padding: 12px 10px;
+  }
+
+  /* Kiosk Navbar (if shown) */
+  .kiosk-navbar {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .navbar-right .current-time {
+    display: none;
+  }
+
+  /* Login Portal */
+  .login-portal-wrapper {
+    padding: 20px 12px;
+    align-items: flex-start;
+  }
+
+  .login-brand-header {
+    margin-bottom: 24px;
+  }
+
+  .login-logo-badge {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  .login-brand-title {
+    font-size: 1.65rem;
+  }
+
+  .login-brand-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .login-portals-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .login-option-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .login-option-badge {
+    top: -10px;
+    left: 18px;
+    font-size: 0.65rem;
+    padding: 3px 10px;
+  }
+
+  .login-option-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 14px;
+  }
+
+  .login-option-title {
+    font-size: 1.25rem;
+  }
+
+  .login-option-desc {
+    font-size: 0.84rem;
+    margin-bottom: 16px;
+  }
+
+  .login-perk-item {
+    font-size: 0.8rem;
+  }
+
+  .login-action-btn {
+    padding: 13px 16px;
+    font-size: 0.92rem;
+  }
+
+  /* 2-Column Food Kiosk Menu Grid */
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .drink-card {
+    border-radius: var(--radius-md);
+  }
+
+  .drink-card-image-box {
+    height: 105px;
+  }
+
+  .bestseller-ribbon {
+    font-size: 0.58rem;
+    padding: 2px 7px;
+    top: 6px;
+    right: 6px;
+  }
+
+  .drink-card-body {
+    padding: 10px 9px;
+    gap: 6px;
+  }
+
+  .drink-category-tag {
+    font-size: 0.62rem;
+  }
+
+  .drink-title {
+    font-size: 0.88rem;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+
+  .drink-desc {
+    display: none; /* Hide long description to preserve clean equal cards */
+  }
+
+  .drink-footer {
+    padding-top: 6px;
+  }
+
+  .drink-price {
+    font-size: 1.15rem;
+  }
+
+  .add-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Category pills */
+  .category-bar {
+    padding-bottom: 6px;
+  }
+
+  .cat-btn {
+    padding: 7px 14px;
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .cat-badge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  /* Search */
+  .search-bar-wrapper {
+    min-width: 100%;
+  }
+
+  .search-input {
+    padding: 10px 14px 10px 38px;
+    font-size: 0.88rem;
+  }
+
+  .search-icon {
+    left: 12px;
+  }
+
+  /* Cart Sidebar */
+  .cart-sidebar {
+    padding: 16px 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .cart-item-row {
+    padding: 10px 0;
+  }
+
+  .cart-item-name {
+    font-size: 0.85rem;
+  }
+
+  .grand-total-amount {
+    font-size: 1.5rem;
+  }
+
+  .place-order-btn {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+  /* Owner Dashboard */
+  .owner-header-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .owner-header-bar h2 {
+    font-size: 1.35rem;
+  }
+
+  .date-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .period-toggle {
+    width: 100%;
+    display: flex;
+  }
+
+  .period-btn {
+    flex: 1;
+    text-align: center;
+    padding: 9px 12px;
+  }
+
+  .date-input-field {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .metric-card {
+    padding: 12px 10px;
+    gap: 4px;
+  }
+
+  .metric-label {
+    font-size: 0.68rem;
+  }
+
+  .metric-value {
+    font-size: 1.35rem;
+  }
+
+  .metric-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .chart-card {
+    padding: 16px 12px;
+  }
+
+  .chart-title {
+    font-size: 1rem;
+  }
+
+  .bar-chart-container {
+    height: 190px;
+    gap: 4px;
+  }
+
+  .bar-column {
+    min-width: 18px;
+  }
+
+  /* TV / Customer Display */
+  .tv-banner {
+    padding: 14px 10px;
+  }
+
+  .tv-banner h1 {
+    font-size: 1.35rem !important;
+  }
+
+  .tv-banner p {
+    font-size: 0.78rem !important;
+  }
+
+  .tv-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .tv-column {
+    padding: 14px 12px;
+  }
+
+  .tv-col-title {
+    font-size: 1.25rem;
+  }
+
+  .tv-order-pill {
+    padding: 12px 14px;
+  }
+
+  .tv-num {
+    font-size: 1.6rem;
+  }
+
+  .tv-name {
+    font-size: 1.05rem;
+  }
+
+  /* Modals */
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-content {
+    max-height: 94vh;
+  }
+
+  .receipt-paper {
+    padding: 20px 14px;
+  }
+}
+
+/* --- EXTRA COMPACT PHONES (max-width: 360px) --- */
+@media (max-width: 360px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .drink-card-image-box {
+    height: 130px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-floating-cart-text {
+    display: none;
+  }
+}
+

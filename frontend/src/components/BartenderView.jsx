@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Search,
   Plus,
@@ -17,7 +17,9 @@ import {
   User,
   Flame,
   CheckCircle2,
+  ArrowRight,
 } from 'lucide-react';
+
 import { CATEGORIES } from '../data/menuData';
 import DrinkImage from './DrinkImage';
 
@@ -38,6 +40,13 @@ export default function BartenderView({
   const [cashTendered, setCashTendered] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nameError, setNameError] = useState(false);
+  const cartSidebarRef = useRef(null);
+
+  const handleScrollToCart = () => {
+    if (cartSidebarRef.current) {
+      cartSidebarRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   // Filter menu items
   const filteredItems = menuItems.filter((item) => {
@@ -347,7 +356,7 @@ export default function BartenderView({
             </section>
 
             {/* Cart & Checkout Sidebar */}
-            <aside className="cart-sidebar">
+            <aside className="cart-sidebar" ref={cartSidebarRef} id="cart-sidebar">
               {/* Cart Header */}
               <div className="cart-header">
                 <div className="cart-title">
@@ -581,7 +590,35 @@ export default function BartenderView({
               )}
             </aside>
           </div>
+
+          {/* Mobile Floating Cart Summary Bar */}
+          {cart.length > 0 && (
+            <div
+              className="mobile-floating-cart-bar"
+              onClick={handleScrollToCart}
+              role="button"
+              tabIndex={0}
+            >
+              <div className="mobile-floating-cart-left">
+                <div className="mobile-floating-cart-icon-pill">
+                  <ShoppingBag size={18} />
+                  <span>{totalItemsCount}</span>
+                </div>
+                <div className="mobile-floating-cart-text">
+                  <span className="mobile-floating-cart-total">₱{grandTotal.toFixed(2)}</span>
+                  <span className="mobile-floating-cart-count">
+                    {totalItemsCount} {totalItemsCount === 1 ? 'drink' : 'drinks'} in order
+                  </span>
+                </div>
+              </div>
+              <div className="mobile-floating-cart-btn">
+                <span>View Order</span>
+                <ArrowRight size={16} />
+              </div>
+            </div>
+          )}
         </main>
+
       )}
 
       {/* VIEW 2: NOW PREPARING & PLEASE CLAIM (Integrated Queue Board) */}
